@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146679485-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146679485-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-146679485-1');
-</script>
+        gtag('config', 'UA-146679485-1');
+    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Richard Liu</title>
-    
+
     <style type="text/css">
         body {
             margin: 40px auto;
@@ -25,6 +26,7 @@
             color: #444;
             padding: 0 10px
         }
+
         h1,
         h2,
         h3 {
@@ -41,27 +43,37 @@
     </header>
 
     <h2>You're probably here because of a link</h2>
-        <h3>Here's a few more links:</h3>
-        <ul>
-            <li><a href="https://github.com/richard4912">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/richard4912/">LinkedIn</a></li>
-            <li>Email: me(at)[root domain]</li>
-        </ul>
+    <h3>Here's a few more links:</h3>
+    <ul>
+        <li><a href="https://github.com/richard4912">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/richard4912/">LinkedIn</a></li>
+        <li>Email: me(at)[root domain]</li>
+    </ul>
 
     <h2>A bit about me:</h2>
-        <p>I'm a recent B.A. Computer Science graduate from UC Berkeley. I currently work as a Software Engineer at <a href="https://www.flexport.com/">Flexport</a>. In the past, I've interned at <a href="https://www.blend.com">Blend</a> and <a href="https://cloud.google.com">Google</a> and have been an <a href="https://www.8vcfellowship.com/">8VC Fellow</a>.</p>
-        <p>My technical interests include making computers go fast, making many computers go fast, and teaching computers how to mimic human intelligence.</p>
-        <!-- <p>Nontechnical interests include economics, history, and classical music.</p> // TODO finish this -->
+    <p>I'm a (not-so) recent B.A. Computer Science graduate from UC Berkeley. I currently work as a Software Engineer at
+        <a href="https://www.stripe.com/">Stripe</a>. In the past, I built performant systems at <a
+            href="https://www.flexport.com">Flexport</a>, interned at
+        <a href="https://cloud.google.com">Google</a> and have been an <a href="https://www.8vcfellowship.com/">8VC
+            Fellow</a>.
+    </p>
+    <p>My technical interests include making computers think fast, making many computers think fast simultaneously, and
+        teaching computers how to mimic human intelligence.</p>
+    <!-- <p>Nontechnical interests include economics, history, and classical music.</p> // TODO finish this -->
+    <!-- 20230821 -- now include points churning, ski, run, etc... // TODO finish this -->
+    <!-- (unifying reporting data systems and 
+designing an indexing service that cut page load times by 70%)
+-->
 
-        <p>Some cool things that I've done:</p>
-        <ul>
-            <li>Distributed tracing for microservices</li>
-            <li>High-throughput data pipelines, built directly on Spark and AWS EMR for compliance reasons</li>
-            <li>Yet-unreleased feature for <a href="https://cloud.google.com/dataproc/">Google Cloud Dataproc</a></li>
-            <li>Teaching RL models to schedule tasks on a cluster</li>
-            <li>Engineering trickery with splitting GAN execution across multiple GPUs</li>
-            <li>Detecting primitive image forgeries with deep nets</li>
-        </ul>
+    <p>Some cool things [last updated 2021] that I've done:</p>
+    <ul>
+        <li>Distributed tracing for microservices</li>
+        <li>High-throughput data pipelines, built directly on Spark and AWS EMR for compliance reasons</li>
+        <li>Yet-unreleased feature for <a href="https://cloud.google.com/dataproc/">Google Cloud Dataproc</a></li>
+        <li>Teaching RL models to schedule tasks on a cluster</li>
+        <li>Engineering trickery with splitting GAN execution across multiple GPUs</li>
+        <li>Detecting primitive image forgeries with deep nets</li>
+    </ul>
     <hr>
 
     <h2>This site</h2>
@@ -72,21 +84,22 @@
     </ul>
 
     <h2>Credits</h2>
-    Inspired by: <a href="http://motherfuckingwebsite.com/">the original</a> and <a href="http://bettermotherfuckingwebsite.com/">the improved</a>
+    Inspired by: <a href="http://motherfuckingwebsite.com/">the original</a> and <a
+        href="http://bettermotherfuckingwebsite.com/">the improved</a>
 
 
-<script>   
-    // Get the last updated date from github repo - borrowed from stanford.edu/~jeffjar/
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://api.github.com/repos/richard4912/website', true);
-    xhr.send();
-    xhr.onreadystatechange = function(e) {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var response = JSON.parse(xhr.responseText);
-            var date = new Date(response['updated_at'])
-            document.getElementById("updated").innerHTML = date;
+    <script>
+        // Get the last updated date from github repo - borrowed from stanford.edu/~jeffjar/
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.github.com/repos/richard4912/website', true);
+        xhr.send();
+        xhr.onreadystatechange = function (e) {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                var date = new Date(response['updated_at'])
+                document.getElementById("updated").innerHTML = date;
+            }
         }
-    }
     </script>
 </body>
 
